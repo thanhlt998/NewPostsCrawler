@@ -1,0 +1,672 @@
+2019-07-19 16:38:44 [scrapy.utils.log] INFO: Scrapy 1.5.2 started (bot: scrapybot)
+2019-07-19 16:38:44 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 | packaged by conda-forge | (default, Mar 27 2019, 23:18:50) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2019-07-19 16:38:44 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 16:38:44 [scrapy.extensions.telnet] INFO: Telnet Password: 0a1b33794df76a6d
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 16:38:44 [py.warnings] WARNING: C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 16:38:44 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 16:38:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 16:38:44 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 16:38:44 [scrapy.extensions.telnet] INFO: Telnet Password: ebcd47d04ecce378
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 16:38:44 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 16:38:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 16:38:44 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 16:38:44 [scrapy.extensions.telnet] INFO: Telnet Password: a85539d28b291070
+2019-07-19 16:38:44 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:44 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 16:38:44 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 16:38:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 16:38:44 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 16:38:44 [scrapy.extensions.telnet] INFO: Telnet Password: ee0198333b8c3df6
+2019-07-19 16:38:44 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:44 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 16:38:44 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 16:38:44 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 16:38:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 16:38:45 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:45 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:45 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:45 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:46 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:46 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:46 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:47 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 16:38:49 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 16:38:49 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 16:38:49 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 16:39:44 [scrapy.extensions.logstats] INFO: Crawled 48 pages (at 48 pages/min), scraped 47 items (at 47 items/min)
+2019-07-19 16:39:44 [scrapy.extensions.logstats] INFO: Crawled 46 pages (at 46 pages/min), scraped 45 items (at 45 items/min)
+2019-07-19 16:39:44 [scrapy.extensions.logstats] INFO: Crawled 48 pages (at 48 pages/min), scraped 47 items (at 47 items/min)
+2019-07-19 16:39:44 [scrapy.extensions.logstats] INFO: Crawled 46 pages (at 46 pages/min), scraped 45 items (at 45 items/min)
+2019-07-19 16:40:44 [scrapy.extensions.logstats] INFO: Crawled 98 pages (at 50 pages/min), scraped 97 items (at 50 items/min)
+2019-07-19 16:40:44 [scrapy.extensions.logstats] INFO: Crawled 95 pages (at 49 pages/min), scraped 94 items (at 49 items/min)
+2019-07-19 16:40:44 [scrapy.extensions.logstats] INFO: Crawled 98 pages (at 50 pages/min), scraped 97 items (at 50 items/min)
+2019-07-19 16:40:44 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 51 pages/min), scraped 96 items (at 51 items/min)
+2019-07-19 16:41:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-19 16:41:23 [kafka.producer.kafka] INFO: Closing the Kafka producer with 4294967.0 secs timeout.
+2019-07-19 16:41:23 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 16:41:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 48633,
+ 'downloader/request_count': 130,
+ 'downloader/request_method_count/GET': 130,
+ 'downloader/response_bytes': 17493723,
+ 'downloader/response_count': 130,
+ 'downloader/response_status_count/200': 127,
+ 'downloader/response_status_count/302': 3,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 19, 9, 41, 23, 742818),
+ 'item_scraped_count': 126,
+ 'log_count/INFO': 62,
+ 'log_count/WARNING': 1,
+ 'offsite/domains': 77,
+ 'offsite/filtered': 81,
+ 'request_depth_max': 1,
+ 'response_received_count': 127,
+ 'scheduler/dequeued': 130,
+ 'scheduler/dequeued/memory': 130,
+ 'scheduler/enqueued': 130,
+ 'scheduler/enqueued/memory': 130,
+ 'start_time': datetime.datetime(2019, 7, 19, 9, 38, 44, 788866)}
+2019-07-19 16:41:23 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-19 16:41:44 [scrapy.extensions.logstats] INFO: Crawled 146 pages (at 51 pages/min), scraped 145 items (at 51 items/min)
+2019-07-19 16:41:44 [scrapy.extensions.logstats] INFO: Crawled 148 pages (at 50 pages/min), scraped 146 items (at 49 items/min)
+2019-07-19 16:41:44 [scrapy.extensions.logstats] INFO: Crawled 147 pages (at 50 pages/min), scraped 146 items (at 50 items/min)
+2019-07-19 16:42:44 [scrapy.extensions.logstats] INFO: Crawled 196 pages (at 50 pages/min), scraped 194 items (at 49 items/min)
+2019-07-19 16:42:44 [scrapy.extensions.logstats] INFO: Crawled 196 pages (at 48 pages/min), scraped 195 items (at 49 items/min)
+2019-07-19 16:42:44 [scrapy.extensions.logstats] INFO: Crawled 197 pages (at 50 pages/min), scraped 196 items (at 50 items/min)
+2019-07-19 16:43:44 [scrapy.extensions.logstats] INFO: Crawled 241 pages (at 45 pages/min), scraped 240 items (at 46 items/min)
+2019-07-19 16:43:44 [scrapy.extensions.logstats] INFO: Crawled 247 pages (at 51 pages/min), scraped 246 items (at 51 items/min)
+2019-07-19 16:43:44 [scrapy.extensions.logstats] INFO: Crawled 235 pages (at 38 pages/min), scraped 233 items (at 37 items/min)
+2019-07-19 16:44:44 [scrapy.extensions.logstats] INFO: Crawled 289 pages (at 48 pages/min), scraped 288 items (at 48 items/min)
+2019-07-19 16:44:44 [scrapy.extensions.logstats] INFO: Crawled 297 pages (at 50 pages/min), scraped 295 items (at 49 items/min)
+2019-07-19 16:44:44 [scrapy.extensions.logstats] INFO: Crawled 282 pages (at 47 pages/min), scraped 281 items (at 48 items/min)
+2019-07-19 16:45:44 [scrapy.extensions.logstats] INFO: Crawled 343 pages (at 54 pages/min), scraped 342 items (at 54 items/min)
+2019-07-19 16:45:44 [scrapy.extensions.logstats] INFO: Crawled 344 pages (at 47 pages/min), scraped 343 items (at 48 items/min)
+2019-07-19 16:45:44 [scrapy.extensions.logstats] INFO: Crawled 330 pages (at 48 pages/min), scraped 329 items (at 48 items/min)
+2019-07-19 16:46:44 [scrapy.extensions.logstats] INFO: Crawled 390 pages (at 47 pages/min), scraped 389 items (at 47 items/min)
+2019-07-19 16:46:44 [scrapy.extensions.logstats] INFO: Crawled 393 pages (at 49 pages/min), scraped 392 items (at 49 items/min)
+2019-07-19 16:46:44 [scrapy.extensions.logstats] INFO: Crawled 381 pages (at 51 pages/min), scraped 380 items (at 51 items/min)
+2019-07-19 16:47:44 [scrapy.extensions.logstats] INFO: Crawled 443 pages (at 53 pages/min), scraped 442 items (at 53 items/min)
+2019-07-19 16:47:44 [scrapy.extensions.logstats] INFO: Crawled 442 pages (at 49 pages/min), scraped 441 items (at 49 items/min)
+2019-07-19 16:47:44 [scrapy.extensions.logstats] INFO: Crawled 432 pages (at 51 pages/min), scraped 431 items (at 51 items/min)
+2019-07-19 16:48:44 [scrapy.extensions.logstats] INFO: Crawled 491 pages (at 48 pages/min), scraped 490 items (at 48 items/min)
+2019-07-19 16:48:44 [scrapy.extensions.logstats] INFO: Crawled 490 pages (at 48 pages/min), scraped 489 items (at 48 items/min)
+2019-07-19 16:48:44 [scrapy.extensions.logstats] INFO: Crawled 483 pages (at 51 pages/min), scraped 482 items (at 51 items/min)
+2019-07-19 16:49:44 [scrapy.extensions.logstats] INFO: Crawled 542 pages (at 51 pages/min), scraped 541 items (at 51 items/min)
+2019-07-19 16:49:44 [scrapy.extensions.logstats] INFO: Crawled 537 pages (at 47 pages/min), scraped 536 items (at 47 items/min)
+2019-07-19 16:49:44 [scrapy.extensions.logstats] INFO: Crawled 533 pages (at 50 pages/min), scraped 532 items (at 50 items/min)
+2019-07-19 16:50:44 [scrapy.extensions.logstats] INFO: Crawled 591 pages (at 49 pages/min), scraped 590 items (at 49 items/min)
+2019-07-19 16:50:44 [scrapy.extensions.logstats] INFO: Crawled 585 pages (at 48 pages/min), scraped 584 items (at 48 items/min)
+2019-07-19 16:50:44 [scrapy.extensions.logstats] INFO: Crawled 583 pages (at 50 pages/min), scraped 582 items (at 50 items/min)
+2019-07-19 16:51:44 [scrapy.extensions.logstats] INFO: Crawled 641 pages (at 50 pages/min), scraped 640 items (at 50 items/min)
+2019-07-19 16:51:44 [scrapy.extensions.logstats] INFO: Crawled 634 pages (at 49 pages/min), scraped 633 items (at 49 items/min)
+2019-07-19 16:51:44 [scrapy.extensions.logstats] INFO: Crawled 632 pages (at 49 pages/min), scraped 631 items (at 49 items/min)
+2019-07-19 16:52:44 [scrapy.extensions.logstats] INFO: Crawled 688 pages (at 47 pages/min), scraped 687 items (at 47 items/min)
+2019-07-19 16:52:44 [scrapy.extensions.logstats] INFO: Crawled 686 pages (at 52 pages/min), scraped 685 items (at 52 items/min)
+2019-07-19 16:52:44 [scrapy.extensions.logstats] INFO: Crawled 682 pages (at 50 pages/min), scraped 680 items (at 49 items/min)
+2019-07-19 16:53:44 [scrapy.extensions.logstats] INFO: Crawled 737 pages (at 49 pages/min), scraped 736 items (at 49 items/min)
+2019-07-19 16:53:44 [scrapy.extensions.logstats] INFO: Crawled 733 pages (at 47 pages/min), scraped 732 items (at 47 items/min)
+2019-07-19 16:53:44 [scrapy.extensions.logstats] INFO: Crawled 730 pages (at 48 pages/min), scraped 729 items (at 49 items/min)
+2019-07-19 16:54:44 [scrapy.extensions.logstats] INFO: Crawled 785 pages (at 48 pages/min), scraped 784 items (at 48 items/min)
+2019-07-19 16:54:44 [scrapy.extensions.logstats] INFO: Crawled 784 pages (at 51 pages/min), scraped 783 items (at 51 items/min)
+2019-07-19 16:54:44 [scrapy.extensions.logstats] INFO: Crawled 778 pages (at 48 pages/min), scraped 777 items (at 48 items/min)
+2019-07-19 16:55:44 [scrapy.extensions.logstats] INFO: Crawled 833 pages (at 48 pages/min), scraped 832 items (at 48 items/min)
+2019-07-19 16:55:44 [scrapy.extensions.logstats] INFO: Crawled 833 pages (at 49 pages/min), scraped 832 items (at 49 items/min)
+2019-07-19 16:55:44 [scrapy.extensions.logstats] INFO: Crawled 827 pages (at 49 pages/min), scraped 826 items (at 49 items/min)
+2019-07-19 16:56:44 [scrapy.extensions.logstats] INFO: Crawled 882 pages (at 49 pages/min), scraped 881 items (at 49 items/min)
+2019-07-19 16:56:44 [scrapy.extensions.logstats] INFO: Crawled 881 pages (at 48 pages/min), scraped 880 items (at 48 items/min)
+2019-07-19 16:56:44 [scrapy.extensions.logstats] INFO: Crawled 875 pages (at 48 pages/min), scraped 874 items (at 48 items/min)
+2019-07-19 16:57:44 [scrapy.extensions.logstats] INFO: Crawled 930 pages (at 48 pages/min), scraped 929 items (at 48 items/min)
+2019-07-19 16:57:44 [scrapy.extensions.logstats] INFO: Crawled 929 pages (at 48 pages/min), scraped 928 items (at 48 items/min)
+2019-07-19 16:57:44 [scrapy.extensions.logstats] INFO: Crawled 923 pages (at 48 pages/min), scraped 922 items (at 48 items/min)
+2019-07-19 16:58:44 [scrapy.extensions.logstats] INFO: Crawled 977 pages (at 47 pages/min), scraped 976 items (at 47 items/min)
+2019-07-19 16:58:44 [scrapy.extensions.logstats] INFO: Crawled 977 pages (at 48 pages/min), scraped 976 items (at 48 items/min)
+2019-07-19 16:58:44 [scrapy.extensions.logstats] INFO: Crawled 973 pages (at 50 pages/min), scraped 972 items (at 50 items/min)
+2019-07-19 16:59:44 [scrapy.extensions.logstats] INFO: Crawled 1026 pages (at 49 pages/min), scraped 1025 items (at 49 items/min)
+2019-07-19 16:59:44 [scrapy.extensions.logstats] INFO: Crawled 1023 pages (at 46 pages/min), scraped 1022 items (at 46 items/min)
+2019-07-19 16:59:44 [scrapy.extensions.logstats] INFO: Crawled 1021 pages (at 48 pages/min), scraped 1020 items (at 48 items/min)
+2019-07-19 17:00:44 [scrapy.extensions.logstats] INFO: Crawled 1074 pages (at 48 pages/min), scraped 1073 items (at 48 items/min)
+2019-07-19 17:00:44 [scrapy.extensions.logstats] INFO: Crawled 1069 pages (at 46 pages/min), scraped 1068 items (at 46 items/min)
+2019-07-19 17:00:44 [scrapy.extensions.logstats] INFO: Crawled 1070 pages (at 49 pages/min), scraped 1069 items (at 49 items/min)
+2019-07-19 17:01:00 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-19 17:01:00 [kafka.producer.kafka] INFO: Closing the Kafka producer with 4294967.0 secs timeout.
+2019-07-19 17:01:00 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 17:01:01 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 410000,
+ 'downloader/request_count': 1101,
+ 'downloader/request_method_count/GET': 1101,
+ 'downloader/response_bytes': 48122161,
+ 'downloader/response_count': 1101,
+ 'downloader/response_status_count/200': 1083,
+ 'downloader/response_status_count/301': 3,
+ 'downloader/response_status_count/302': 15,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 19, 10, 1, 0, 930795),
+ 'item_scraped_count': 1082,
+ 'log_count/INFO': 101,
+ 'offsite/domains': 8,
+ 'offsite/filtered': 255,
+ 'request_depth_max': 1,
+ 'response_received_count': 1083,
+ 'scheduler/dequeued': 1101,
+ 'scheduler/dequeued/memory': 1101,
+ 'scheduler/enqueued': 1101,
+ 'scheduler/enqueued/memory': 1101,
+ 'start_time': datetime.datetime(2019, 7, 19, 9, 38, 44, 882883)}
+2019-07-19 17:01:01 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-19 17:01:44 [scrapy.extensions.logstats] INFO: Crawled 1122 pages (at 48 pages/min), scraped 1121 items (at 48 items/min)
+2019-07-19 17:01:44 [scrapy.extensions.logstats] INFO: Crawled 1119 pages (at 50 pages/min), scraped 1118 items (at 50 items/min)
+2019-07-19 17:02:44 [scrapy.extensions.logstats] INFO: Crawled 1168 pages (at 46 pages/min), scraped 1167 items (at 46 items/min)
+2019-07-19 17:02:44 [scrapy.extensions.logstats] INFO: Crawled 1167 pages (at 48 pages/min), scraped 1166 items (at 48 items/min)
+2019-07-19 17:03:44 [scrapy.extensions.logstats] INFO: Crawled 1218 pages (at 50 pages/min), scraped 1217 items (at 50 items/min)
+2019-07-19 17:03:44 [scrapy.extensions.logstats] INFO: Crawled 1219 pages (at 52 pages/min), scraped 1218 items (at 52 items/min)
+2019-07-19 17:03:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-07-19 17:03:48 [kafka.producer.kafka] INFO: Closing the Kafka producer with 4294967.0 secs timeout.
+2019-07-19 17:03:48 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 17:03:49 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 463052,
+ 'downloader/request_count': 1223,
+ 'downloader/request_method_count/GET': 1223,
+ 'downloader/response_bytes': 45200912,
+ 'downloader/response_count': 1223,
+ 'downloader/response_status_count/200': 1222,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 7, 19, 10, 3, 48, 851824),
+ 'item_scraped_count': 1221,
+ 'log_count/INFO': 122,
+ 'offsite/domains': 3,
+ 'offsite/filtered': 9,
+ 'request_depth_max': 1,
+ 'response_received_count': 1222,
+ 'scheduler/dequeued': 1223,
+ 'scheduler/dequeued/memory': 1223,
+ 'scheduler/enqueued': 1223,
+ 'scheduler/enqueued/memory': 1223,
+ 'start_time': datetime.datetime(2019, 7, 19, 9, 38, 44, 850885)}
+2019-07-19 17:03:49 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-07-19 17:04:44 [scrapy.extensions.logstats] INFO: Crawled 1268 pages (at 50 pages/min), scraped 1267 items (at 50 items/min)
+2019-07-19 17:05:44 [scrapy.extensions.logstats] INFO: Crawled 1316 pages (at 48 pages/min), scraped 1315 items (at 48 items/min)
+2019-07-19 17:06:44 [scrapy.extensions.logstats] INFO: Crawled 1366 pages (at 50 pages/min), scraped 1365 items (at 50 items/min)
+2019-07-19 17:07:44 [scrapy.extensions.logstats] INFO: Crawled 1415 pages (at 49 pages/min), scraped 1414 items (at 49 items/min)
+2019-07-19 17:08:44 [scrapy.extensions.logstats] INFO: Crawled 1463 pages (at 48 pages/min), scraped 1462 items (at 48 items/min)
+2019-07-19 17:09:44 [scrapy.extensions.logstats] INFO: Crawled 1512 pages (at 49 pages/min), scraped 1511 items (at 49 items/min)
+2019-07-19 17:10:44 [scrapy.extensions.logstats] INFO: Crawled 1562 pages (at 50 pages/min), scraped 1561 items (at 50 items/min)
+2019-07-19 17:11:44 [scrapy.extensions.logstats] INFO: Crawled 1612 pages (at 50 pages/min), scraped 1611 items (at 50 items/min)
+2019-07-19 17:12:44 [scrapy.extensions.logstats] INFO: Crawled 1662 pages (at 50 pages/min), scraped 1661 items (at 50 items/min)
+2019-07-19 17:13:44 [scrapy.extensions.logstats] INFO: Crawled 1710 pages (at 48 pages/min), scraped 1709 items (at 48 items/min)
+2019-07-19 17:14:44 [scrapy.extensions.logstats] INFO: Crawled 1763 pages (at 53 pages/min), scraped 1762 items (at 53 items/min)
+2019-07-19 20:15:02 [scrapy.extensions.logstats] INFO: Crawled 1778 pages (at 15 pages/min), scraped 1777 items (at 15 items/min)
+2019-07-19 20:15:02 [scrapy.core.engine] INFO: Closing spider (closespider_timeout)
+2019-07-19 20:15:02 [kafka.producer.kafka] INFO: Closing the Kafka producer with 4294967.0 secs timeout.
+2019-07-19 20:15:02 [kafka.client] INFO: Closing idle connection 0, last active 10799951 ms ago
+2019-07-19 20:15:02 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 20:15:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/request_bytes': 709189,
+ 'downloader/request_count': 1780,
+ 'downloader/request_method_count/GET': 1780,
+ 'downloader/response_bytes': 20145202,
+ 'downloader/response_count': 1779,
+ 'downloader/response_status_count/200': 1778,
+ 'downloader/response_status_count/301': 1,
+ 'finish_reason': 'closespider_timeout',
+ 'finish_time': datetime.datetime(2019, 7, 19, 13, 15, 2, 508700),
+ 'item_scraped_count': 1777,
+ 'log_count/INFO': 148,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 45,
+ 'request_depth_max': 1,
+ 'response_received_count': 1778,
+ 'retry/count': 1,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 1,
+ 'scheduler/dequeued': 1780,
+ 'scheduler/dequeued/memory': 1780,
+ 'scheduler/enqueued': 4489,
+ 'scheduler/enqueued/memory': 4489,
+ 'start_time': datetime.datetime(2019, 7, 19, 9, 38, 44, 818869)}
+2019-07-19 20:15:04 [scrapy.core.engine] INFO: Spider closed (closespider_timeout)
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [kafka.producer.kafka] INFO: Kafka producer closed
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [kafka.producer.kafka] INFO: Kafka producer closed
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [kafka.producer.kafka] INFO: Kafka producer closed
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 20:15:04 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+TypeError: sleep() missing 1 required keyword-only argument: 'seconds'
+2019-07-19 21:50:35 [scrapy.utils.log] INFO: Scrapy 1.5.2 started (bot: scrapybot)
+2019-07-19 21:50:35 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.9, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 | packaged by conda-forge | (default, Mar 27 2019, 23:18:50) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.18362-SP0
+2019-07-19 21:50:35 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 21:50:35 [scrapy.extensions.telnet] INFO: Telnet Password: e4b51278b8d1cc57
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 21:50:35 [py.warnings] WARNING: C:\Users\toila\AppData\Local\Continuum\anaconda3\envs\crawler\lib\site-packages\scrapy\utils\deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 21:50:35 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 21:50:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 21:50:35 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 21:50:35 [scrapy.extensions.telnet] INFO: Telnet Password: eaf748a78ddcc5d5
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 21:50:35 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 21:50:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:35 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 21:50:35 [scrapy.extensions.telnet] INFO: Telnet Password: 2f7618363786cab8
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 21:50:35 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 21:50:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:35 [scrapy.crawler] INFO: Overridden settings: {'CLOSESPIDER_TIMEOUT': 3600, 'CONCURRENT_REQUESTS': 1, 'CONCURRENT_REQUESTS_PER_DOMAIN': 1, 'COOKIES_ENABLED': False, 'DEPTH_LIMIT': 1, 'DEPTH_PRIORITY': 1, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter', 'LOG_FILE': 'log/file.log', 'LOG_LEVEL': 'INFO', 'TELNETCONSOLE_PORT': None}
+2019-07-19 21:50:35 [scrapy.extensions.telnet] INFO: Telnet Password: 1827b93e5b361cdd
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['random_useragent.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-19 21:50:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['pipelines.KafkaItemPipeline']
+2019-07-19 21:50:35 [scrapy.core.engine] INFO: Spider opened
+2019-07-19 21:50:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:35 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:38 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2019-07-19 21:50:39 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2019-07-19 21:50:39 [kafka.conn] INFO: <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2019-07-19 21:50:39 [kafka.conn] INFO: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
