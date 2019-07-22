@@ -9,7 +9,7 @@ class MysqlConnection:
         self.connection = self.get_connection(host, user, password, db)
 
     def get_domain_object_list(self):
-        sql = "select * from domain"
+        sql = "select domain_id, domain_name from domain"
         with self.connection.cursor() as cursor:
             cursor.execute(sql)
         domains = [Domain(**obj) for obj in cursor.fetchall()]
@@ -51,9 +51,10 @@ class MysqlConnection:
             crawled_urls = [url['url'] for url in cursor.fetchall()]
         return Domain(domain_name=domain_name, crawled_urls=crawled_urls, domain_id=domain_id)
 
-    def get_domain_id_list(self):
+    def get_domain_id_list(self, no_domains_limit=None):
         with self.connection.cursor() as cursor:
-            cursor.execute("select domain_id from domain")
+            cursor.execute("select domain_id from domain order by score" + (
+                f" limit {no_domains_limit}" if no_domains_limit else ''))
             domain_ids = [obj['domain_id'] for obj in cursor.fetchall()]
         return domain_ids
 

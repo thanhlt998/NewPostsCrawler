@@ -1,10 +1,10 @@
 NO_MAX_CONCURRENT_SPIDER = 100
 
 MYSQL_DB = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '123456',
-    'db': 'adfilex-url-crawl'
+    'host': '192.168.1.239',
+    'user': 'thanhlt',
+    'password': 'ThanhLT@MySQL2019',
+    'db': 'TTS'
 }
 
 REDIS_SERVER = {
@@ -41,6 +41,7 @@ SETTINGS = {
     'CLOSESPIDER_TIMEOUT': 3600,  # 1 hours
 
     # Kafka settings
-    'BOOTSTRAP_SERVERS': ['localhost:9092'],
+    # 'BOOTSTRAP_SERVERS': ['localhost:9092'],
+    'BOOTSTRAP_SERVERS': ['192.168.1.239:9092'],
     'TOPIC': 'adfilex-url-crawl'
 }
