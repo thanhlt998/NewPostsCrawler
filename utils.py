@@ -11,3 +11,7 @@ def is_resource_url(url):
             url.lower()):
         return True
     return False
+
+
+def fix_url(url):
+    return re.sub("#.+", '', url)

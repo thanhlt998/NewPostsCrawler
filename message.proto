@@ -1,0 +1,4 @@
+message {
+    string url = 1;
+    string raw = 2;
+}

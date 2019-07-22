@@ -4,3 +4,4 @@ proto-plus
 kafka-python
 redis
 bloom-filter
+python-snappy
