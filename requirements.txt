@@ -1,0 +1,6 @@
+scrapy==1.5.2
+PyMySQL
+proto-plus
+kafka-python
+redis
+bloom-filter
