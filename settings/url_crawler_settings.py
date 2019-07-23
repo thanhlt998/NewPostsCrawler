@@ -1,21 +1,9 @@
-NO_MAX_CONCURRENT_SPIDER = 100
-
-MYSQL_DB = {
-    'host': '192.168.1.239',
-    'user': 'thanhlt',
-    'password': 'ThanhLT@MySQL2019',
-    'db': 'TTS'
-}
-
-REDIS_SERVER = {
-    'host': 'localhost',
-    'port': 6379,
-    'db': 0
-}
+PERSIST_QUEUE_PATH = 'urls-queue'
+NEW_URLS_TOPIC = "new-urls"
+NO_CONCURRENT_URLS = 100
 
 SETTINGS = {
-    'DEPTH_LIMIT': 1,
-    'LOG_FILE': 'log/file.log',
+    'LOG_FILE': 'log/url_crawler.log',
 
     'DOWNLOADER_MIDDLEWARES': {
         'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
@@ -26,10 +14,11 @@ SETTINGS = {
         'pipelines.KafkaItemPipeline': 300
     },
 
-    'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter',
+    # 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter',
+    'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
 
     'DEPTH_PRIORITY': 1,
-    'DOWNLOAD_DELAY': 1,
+    # 'DOWNLOAD_DELAY': 1,
     'CONCURRENT_REQUESTS': 1,
     'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
     'LOG_LEVEL': 'INFO',
@@ -37,8 +26,6 @@ SETTINGS = {
     'TELNETCONSOLE_PORT': None,
 
     'USER_AGENT_LIST': 'data/user_agent.txt',
-
-    'CLOSESPIDER_TIMEOUT': 3600,  # 1 hours
 
     # Kafka settings
     # 'BOOTSTRAP_SERVERS': ['localhost:9092'],

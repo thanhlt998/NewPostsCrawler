@@ -5,11 +5,14 @@ import logging
 from logging.handlers import RotatingFileHandler
 from twisted.internet import reactor
 from twisted.internet.task import deferLater
+import sys
+import time
+import os
 
 from connection import MysqlConnection
 from redis_server import RedisServer
 from crawler import NewPostCrawler
-from settings import MYSQL_DB, REDIS_SERVER, NO_MAX_CONCURRENT_SPIDER, SETTINGS
+from settings.domain_crawler_settings import MYSQL_DB, REDIS_SERVER, NO_MAX_CONCURRENT_SPIDER, SETTINGS
 
 
 def crawl():
@@ -23,7 +26,7 @@ def crawl_new_domain(result=None):
     domain_id = redis_server.get_domains_to_crawl('domain_ids')
     domain = connection.get_domain_object_by_domain_id(domain_id=int(domain_id))
     deffered = process.crawl(NewPostCrawler, name="new_posts_crawler", domain=domain)
-    deffered.addCallback(sleep, 10)
+    deffered.addCallback(sleep, None, seconds=10)
     deffered.addCallback(crawl_new_domain)
 
 
@@ -60,3 +63,6 @@ if __name__ == '__main__':
     # start crawling
     crawl()
     process.start()
+
+    time.sleep(0.5)
+    os.execl(sys.executable, sys.executable, *sys.argv)

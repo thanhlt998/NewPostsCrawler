@@ -1,4 +1,10 @@
-message {
+syntax = "proto3";
+
+message UrlHTML {
     string url = 1;
     string raw = 2;
+}
+
+message UrlsMessage {
+    repeated string urls;
 }

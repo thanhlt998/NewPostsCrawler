@@ -5,3 +5,5 @@ kafka-python
 redis
 bloom-filter
 python-snappy
+persist-queue
+flask

@@ -1,10 +1,11 @@
 from scrapy import Spider, Request
+import persistqueue
 
 from utils import get_url_with_scheme, is_resource_url, fix_url
 from items import UrlItem
 from connection import MysqlConnection
-from settings import MYSQL_DB
-from proto_message import UrlHTML
+from settings.domain_crawler_settings import MYSQL_DB
+from settings.url_crawler_settings import PERSIST_QUEUE_PATH
 
 
 class NewPostCrawler(Spider):
@@ -43,3 +44,34 @@ class NewPostCrawler(Spider):
                                      db=MYSQL_DB['db'])
         connection.update_domain_object(self.domain)
         connection.close_connection()
+
+
+class UrlsCrawler(Spider):
+    custom_settings = {
+        # 'DOWNLOAD_DELAY': 0.5
+    }
+
+    def __init__(self, name=None, **kwargs):
+        self.queue = persistqueue.SQLiteQueue(PERSIST_QUEUE_PATH, auto_commit=True, multithreading=True)
+        super(UrlsCrawler, self).__init__(name, **kwargs)
+
+    def start_requests(self):
+        for i in range(100):
+            yield Request(url='https://www.google.com/', callback=self.start_crawl, errback=self.error_back)
+
+    def start_crawl(self, response):
+        url = self.queue.get()
+        yield Request(url=url, callback=self.crawl_new_url, errback=self.error_back)
+
+    def crawl_new_url(self, response):
+        yield UrlItem(url=response.request.url, raw=response.text)
+        url = self.queue.get()
+        yield Request(url=url, callback=self.crawl_new_url, errback=self.error_back)
+
+    def parse(self, response):
+        yield UrlItem(url=response.request.url, raw=response.text)
+
+    def error_back(self, failure):
+        self.logger.error(f"Error when load page: {failure.request.url}")
+        url = self.queue.get()
+        yield Request(url=url, callback=self.crawl_new_url, errback=self.error_back)
