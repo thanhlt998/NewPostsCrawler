@@ -37,7 +37,7 @@ class MysqlConnection:
         self.connection.commit()
 
     def update_domain_object(self, domain):
-        sql = f"insert into domain_url (domain_id, url, crawl_time) values (%s, %s, {get_time_now()})"
+        sql = f"insert into domain_url (domain_id, url, crawl_time) values (%s, %s, '{get_time_now()}')"
         with self.connection.cursor() as cursor:
             cursor.executemany(sql, [(domain.domain_id, url) for url in domain.new_urls])
         self.connection.commit()
@@ -45,7 +45,7 @@ class MysqlConnection:
     def get_domain_object_by_domain_id(self, domain_id):
         select_domain_name_sql = "select domain_name from domain where domain_id = %s"
         select_crawled_urls_sql = f"select url from domain_url where domain_id = %s" \
-            f" and crawl_time > {get_time_before_now(EXPIRE_WINDOWS_TIME_SIZE)}"
+            f" and crawl_time > '{get_time_before_now(EXPIRE_WINDOWS_TIME_SIZE)}'"
         with self.connection.cursor() as cursor:
             cursor.execute(select_domain_name_sql, (domain_id,))
             domain_name = cursor.fetchone().get('domain_name')
