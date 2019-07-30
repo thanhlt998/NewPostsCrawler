@@ -2,6 +2,8 @@ import pymysql
 import pymysql.cursors as cursors
 
 from domain_class import Domain
+from utils import get_time_before_now
+from settings.domain_crawler_settings import EXPIRE_WINDOWS_TIME_SIZE
 
 
 class MysqlConnection:
@@ -42,7 +44,8 @@ class MysqlConnection:
 
     def get_domain_object_by_domain_id(self, domain_id):
         select_domain_name_sql = "select domain_name from domain where domain_id = %s"
-        select_crawled_urls_sql = "select url from domain_url where domain_id = %s"
+        select_crawled_urls_sql = f"select url from domain_url where domain_id = %s" \
+            f" and crawl_time > {get_time_before_now(EXPIRE_WINDOWS_TIME_SIZE)}"
         with self.connection.cursor() as cursor:
             cursor.execute(select_domain_name_sql, (domain_id,))
             domain_name = cursor.fetchone().get('domain_name')

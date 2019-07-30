@@ -8,7 +8,7 @@ from proto_message import UrlsMessage
 
 
 def get_app():
-    app = Flask(__name__, static_folder="templates/static")
+    app = Flask(__name__)
 
     @app.route("/add_urls", methods=['POST'])
     def api():
