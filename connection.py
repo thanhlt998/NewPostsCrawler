@@ -2,7 +2,7 @@ import pymysql
 import pymysql.cursors as cursors
 
 from domain_class import Domain
-from utils import get_time_before_now
+from utils import get_time_before_now, get_time_now
 from settings.domain_crawler_settings import EXPIRE_WINDOWS_TIME_SIZE
 
 
@@ -37,7 +37,7 @@ class MysqlConnection:
         self.connection.commit()
 
     def update_domain_object(self, domain):
-        sql = "insert into domain_url (domain_id, url) values (%s, %s)"
+        sql = f"insert into domain_url (domain_id, url, crawl_time) values (%s, %s, {get_time_now()})"
         with self.connection.cursor() as cursor:
             cursor.executemany(sql, [(domain.domain_id, url) for url in domain.new_urls])
         self.connection.commit()
