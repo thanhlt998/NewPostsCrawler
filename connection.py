@@ -55,8 +55,6 @@ class MysqlConnection:
         return Domain(domain_name=domain_name, crawled_urls=crawled_urls, domain_id=domain_id)
 
     def insert_new_domain(self, domain_name):
-        check_exist_sql = "select count(*) as c from domain where domain_name like %s"
-
         insert_domain_sql = "insert into domain (domain_name, " \
                             "first_time_crawl," \
                             "last_time_updated," \
@@ -75,17 +73,17 @@ class MysqlConnection:
                             "score) values (%s, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)"
         select_id_sql = "select domain_id from domain where domain_name like %s"
         with self.connection.cursor() as cursor:
-            cursor.execute(check_exist_sql, (domain_name,))
-            count = cursor.fetchone()['c']
+            cursor.execute(select_id_sql, (domain_name,))
+            domain_id = cursor.fetchone()
 
-            if count == 0:
+            if not domain_id:
                 cursor.execute(insert_domain_sql, (domain_name,))
                 self.connection.commit()
                 cursor.execute(select_id_sql, (domain_name,))
                 domain_id = cursor.fetchone()['domain_id']
 
                 return domain_id
-        return 0
+        return domain_id['domain_id']
 
     def get_domain_id_list(self, no_domains_limit=None):
         with self.connection.cursor() as cursor:
