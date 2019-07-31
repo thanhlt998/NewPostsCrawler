@@ -1,5 +1,6 @@
 from scrapy import Spider, Request
 import persistqueue
+from urllib.parse import quote
 
 from utils import get_url_with_scheme, is_resource_url, fix_url
 from items import UrlItem
@@ -21,7 +22,7 @@ class NewPostCrawler(Spider):
                       errback=self.domain_error_back)
 
     def parse(self, response):
-        urls = [fix_url(response.urljoin(url.strip())) for url in response.xpath("//a/@href").getall() if
+        urls = [quote(fix_url(response.urljoin(url.strip()))) for url in response.xpath("//a/@href").getall() if
                 not is_resource_url(url)]
 
         for url in urls:

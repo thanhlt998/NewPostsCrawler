@@ -16,6 +16,7 @@ from settings.domain_crawler_settings import MYSQL_DB, REDIS_SERVER, NO_MAX_CONC
 
 
 def crawl():
+    redis_server.set_no_domains(len(domain_ids))
     i = 0
     while i < min(NO_MAX_CONCURRENT_SPIDER, len(domain_ids)):
         crawl_new_domain()

@@ -24,6 +24,28 @@ class RedisServer:
     def insert_domain(self, key_name, domain):
         return self.redis_server.lpush(key_name, domain)
 
+    def remove_domains(self, key_name, domains):
+        no_current_domains = self.get_no_domains()
+        removed_domains = []
+        i = 0
+
+        while i < no_current_domains:
+            domain = int(self.pop_domain(key_name))
+            if domain in domains:
+                removed_domains.append(domain)
+            else:
+                self.insert_domain(key_name, domain)
+            i += 1
+
+        self.set_no_domains(no_current_domains - len(removed_domains))
+
+    def set_no_domains(self, no_domains):
+        self.redis_server.set('no_domains', no_domains)
+
+    def get_no_domains(self):
+        no_domains = self.redis_server.get('no_domains')
+        return int(no_domains) if no_domains else 0
+
     def pop_domain(self, key_name):
         return self.redis_server.rpop(key_name)
 

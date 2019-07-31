@@ -54,11 +54,52 @@ class MysqlConnection:
             crawled_urls = [url['url'] for url in cursor.fetchall()]
         return Domain(domain_name=domain_name, crawled_urls=crawled_urls, domain_id=domain_id)
 
+    def insert_new_domain(self, domain_name):
+        check_exist_sql = "select count(*) as c from domain where domain_name like %s"
+
+        insert_domain_sql = "insert into domain (domain_name, " \
+                            "first_time_crawl," \
+                            "last_time_updated," \
+                            "domain_age," \
+                            "domain_popularity," \
+                            "error_rate," \
+                            "avg_request_time," \
+                            "avg_new_posts_per_day," \
+                            "no_requested_requests," \
+                            "no_out_domains," \
+                            "pagerank," \
+                            "ssl_grade," \
+                            "meaning_word_rate," \
+                            "no_sub_domains," \
+                            "domain_length," \
+                            "score) values (%s, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)"
+        select_id_sql = "select domain_id from domain where domain_name like %s"
+        with self.connection.cursor() as cursor:
+            cursor.execute(check_exist_sql, (domain_name,))
+            count = cursor.fetchone()['c']
+
+            if count == 0:
+                cursor.execute(insert_domain_sql, (domain_name,))
+                self.connection.commit()
+                cursor.execute(select_id_sql, (domain_name,))
+                domain_id = cursor.fetchone()['domain_id']
+
+                return domain_id
+        return 0
+
     def get_domain_id_list(self, no_domains_limit=None):
         with self.connection.cursor() as cursor:
             cursor.execute("select domain_id from domain order by score" + (
                 f" limit {no_domains_limit}" if no_domains_limit else ''))
             domain_ids = [obj['domain_id'] for obj in cursor.fetchall()]
+        return domain_ids
+
+    def get_domain_id_list_with_domain_names(self, domains):
+        sql = f"select domain_id from domain where domain_name in ({', '.join(['%s'] * len(domains))})"
+        with self.connection.cursor() as cursor:
+            cursor.execute(sql, tuple(domains))
+            domain_ids = [domain['domain_id'] for domain in cursor.fetchall()]
+
         return domain_ids
 
     def close_connection(self):

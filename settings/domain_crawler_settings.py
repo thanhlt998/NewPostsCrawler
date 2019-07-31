@@ -42,6 +42,7 @@ SETTINGS = {
     'LOG_LEVEL': 'INFO',
     'COOKIES_ENABLED': False,
     'TELNETCONSOLE_PORT': None,
+    'REDIRECT_ENABLED': False,
 
     'USER_AGENT_LIST': 'data/user_agent.txt',
 

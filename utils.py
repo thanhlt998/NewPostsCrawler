@@ -15,7 +15,7 @@ def is_resource_url(url):
 
 
 def fix_url(url):
-    return re.sub("#.+", '', url)
+    return re.sub(r"(#.+|^\s+|\s+$)", '', url)
 
 
 def get_time_before_now(no_days):
