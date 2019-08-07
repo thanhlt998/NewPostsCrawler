@@ -49,7 +49,7 @@ MYSQL_DB: host, user, password, db - connect to MySQL server
 
 3. Remove domains from loop domains
     - Url: http://address:port/remove_domains
-    - Method: POST
+    - Method: DELETE
     - Content-Type: application/json
     - Data json: {"domains" : []}
 ```
