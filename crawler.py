@@ -1,8 +1,7 @@
 from scrapy import Spider, Request
 import persistqueue
-from urllib.parse import quote
 
-from utils import get_url_with_scheme, is_resource_url, fix_url
+from utils import get_url_with_scheme, is_resource_url, fix_url, url_encode
 from items import UrlItem
 from connection import MysqlConnection
 from settings.domain_crawler_settings import MYSQL_DB
@@ -22,7 +21,7 @@ class NewPostCrawler(Spider):
                       errback=self.domain_error_back)
 
     def parse(self, response):
-        urls = [quote(fix_url(response.urljoin(url.strip()))) for url in response.xpath("//a/@href").getall() if
+        urls = [url_encode(fix_url(response.urljoin(url.strip()))) for url in response.xpath("//a/@href").getall() if
                 not is_resource_url(url)]
 
         for url in urls:
