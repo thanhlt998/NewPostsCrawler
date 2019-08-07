@@ -1,6 +1,6 @@
 import re
 from datetime import datetime, timedelta
-from urllib.parse import quote
+
 
 def get_url_with_scheme(domain):
     return ''.join(["http://", domain])
@@ -24,11 +24,3 @@ def get_time_before_now(no_days):
 
 def get_time_now():
     return '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
-
-
-def url_encode(url):
-    url_split = re.split(r'://', url)
-    if len(url_split) > 1:
-        return '://'.join([url_split[0], quote(url_split[1])])
-    else:
-        return url
