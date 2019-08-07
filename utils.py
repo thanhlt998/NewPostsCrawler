@@ -28,4 +28,7 @@ def get_time_now():
 
 def url_encode(url):
     url_split = re.split(r'://', url)
-    return '://'.join([url_split[0], quote(url_split[1])])
+    if len(url_split) > 1:
+        return '://'.join([url_split[0], quote(url_split[1])])
+    else:
+        return url
