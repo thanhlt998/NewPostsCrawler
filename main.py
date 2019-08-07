@@ -24,8 +24,11 @@ def crawl():
 
 
 def crawl_new_domain(result=None):
+    connection_ = MysqlConnection(host=MYSQL_DB['host'], user=MYSQL_DB['user'], password=MYSQL_DB['password'],
+                                 db=MYSQL_DB['db'])
     domain_id = redis_server.get_domains_to_crawl('domain_ids')
-    domain = connection.get_domain_object_by_domain_id(domain_id=int(domain_id))
+    domain = connection_.get_domain_object_by_domain_id(domain_id=int(domain_id))
+    connection_.close_connection()
     deffered = process.crawl(NewPostCrawler, name="new_posts_crawler", domain=domain)
     deffered.addCallback(sleep, None, seconds=10)
     deffered.addCallback(crawl_new_domain)
@@ -42,6 +45,7 @@ if __name__ == '__main__':
     redis_server = RedisServer(host=REDIS_SERVER['host'], port=REDIS_SERVER['port'], db=REDIS_SERVER['db'])
 
     domain_ids = connection.get_domain_id_list()
+    connection.close_connection()
     redis_server.set_list("domain_ids", domain_ids)
 
     # settings
