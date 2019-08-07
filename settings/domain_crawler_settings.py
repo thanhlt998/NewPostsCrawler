@@ -33,7 +33,7 @@ SETTINGS = {
         'pipelines.KafkaItemPipeline': 300
     },
 
-    'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter',
+    # 'DUPEFILTER_CLASS': 'filters.BLOOMDupeFilter',
 
     'DEPTH_PRIORITY': 1,
     'DOWNLOAD_DELAY': 1,
